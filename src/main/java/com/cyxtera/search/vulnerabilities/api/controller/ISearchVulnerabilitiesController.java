@@ -1,10 +1,13 @@
 package com.cyxtera.search.vulnerabilities.api.controller;
 
+import java.util.List;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import com.cyxtera.search.vulnerabilities.api.modelo.VolnurabilityRequest;
 import com.cyxtera.search.vulnerabilities.api.modelo.VolnurabilityResponse;
+import com.cyxtera.search.vulnerabilities.api.modelo.VulnerabilityBD;
 
 /**
  * Intefacez charges exposing the api method
@@ -26,7 +29,7 @@ public interface ISearchVulnerabilitiesController {
 	/**
 	 * Method that return the vulnerabilities 
 	 */
-	public void getResultVulnerabilities(); 
+	public List<VulnerabilityBD> getResultVulnerabilities(String costumerName); 
 	
 	/**
 	 * Method that generates report to Security Teams
