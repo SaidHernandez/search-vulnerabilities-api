@@ -1,10 +1,7 @@
 package com.cyxtera.search.vulnerabilities.api.business;
 
-import java.util.List;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import com.cyxtera.search.vulnerabilities.api.modelo.VolnurabilityRequest;
 import com.cyxtera.search.vulnerabilities.api.modelo.VolnurabilityResponse;
@@ -21,5 +18,11 @@ public interface  ISearchVulnerabilitiesBusiness {
 	 * @param namesURL Names of the URL in order to look for the rank 
 	 */
 	public VolnurabilityResponse toSearchScoreVulnerabilities(ISearchVulnerabilitiesProcessor iSearchVulnerabilitiesProcessor , VolnurabilityRequest request); 
+	
+	/**
+	 * Method in charge to build the client message  
+	 * @return VolnurabilityResponse
+	 */
+	public VolnurabilityResponse buildMessageResponse(String message, String code);
 
 }

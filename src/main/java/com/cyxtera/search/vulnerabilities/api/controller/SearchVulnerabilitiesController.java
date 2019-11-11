@@ -25,7 +25,7 @@ public class SearchVulnerabilitiesController implements ISearchVulnerabilitiesCo
 	@Override
 	@RequestMapping(value={"/v1/vulnerability"},  produces="application/json", consumes = "application/json", method = RequestMethod.POST)
 	public @ResponseBody VolnurabilityResponse toSearchVulnerabilities(@RequestBody VolnurabilityRequest request) {
-		logger.info("Begin the searchVulnerabilities method");
+		logger.info("Init the searchVulnerabilities method");
 		return iSearchVulnerabilitiesBusiness.toSearchScoreVulnerabilities(iSearchVulnerabilitiesProcessor, request);
 	}
 
