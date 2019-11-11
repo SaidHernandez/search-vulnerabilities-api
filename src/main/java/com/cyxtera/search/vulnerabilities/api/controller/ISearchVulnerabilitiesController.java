@@ -3,6 +3,9 @@ package com.cyxtera.search.vulnerabilities.api.controller;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import com.cyxtera.search.vulnerabilities.api.modelo.VolnurabilityRequest;
+import com.cyxtera.search.vulnerabilities.api.modelo.VolnurabilityResponse;
+
 /**
  * Intefacez charges exposing the api method
  * 
@@ -18,7 +21,7 @@ public interface ISearchVulnerabilitiesController {
 	/**
 	 * Method that look for the URL score vulnerability  
 	 */
-	public String toSearchVulnerabilities(); 
+	public VolnurabilityResponse toSearchVulnerabilities(VolnurabilityRequest request); 
 	
 	/**
 	 * Method that return the vulnerabilities 
